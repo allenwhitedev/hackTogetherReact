@@ -10,7 +10,7 @@ import {
 
 import './mapComponent.css';
 
-const MapComponent = compose(
+const Map = compose(
   withProps({
     /**
      * Note: create and replace your own key in the Google console.
@@ -33,4 +33,4 @@ const MapComponent = compose(
   </GoogleMap>
 ));
 
-export default MapComponent;
+export default Map;
