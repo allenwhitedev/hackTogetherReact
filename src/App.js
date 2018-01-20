@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
-
-import TestComponent from './components/TestComponent/TestComponent.js'
+// import MyMapComponent from './components/MapComponent/MapComponent.js'
+import TestComponent from './components/TestComponent/TestComponent'
+import GeoLocationComponent from './components/GeoLocationComponent/GeoLocationComponent'
 
 class App extends Component 
 {
@@ -24,7 +25,7 @@ class App extends Component
         </header>
 
         <TestComponent apiUrl={this.apiUrl} />
-
+        <GeoLocationComponent />
       </div>
     );
   }
