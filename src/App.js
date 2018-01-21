@@ -5,13 +5,14 @@ import logo from './logo.svg'
 
 import './App.css'
 // import MyMapComponent from './components/MapComponent/MapComponent.js'
-import TestComponent from './components/TestComponent/TestComponent'
 import GeoLocation from './components/GeoLocationComponent/GeoLocationComponent'
 import NewsFeed from './components/NewsFeedComponent/NewsFeedComponent';
 import NearbyHackathons from './components/NearbyHackthonsComponent/NearbyHackathonsComponent';
 import NavBar from './components/NavBarComponent/NavBarComponent';
 import FrontSplash from './components/FrontSplashComponent/FrontSplashComponent';
 import Signup from './components/Signup/Signup.js'
+import Profile from './components/ProfileComponent/ProfileComponent';
+import Hackathon from './components/HackathonComponent/HackathonComponent';
 
 class App extends Component 
 {
@@ -25,26 +26,73 @@ class App extends Component
       firstName: null,
       lastName: null,
       email: null,
-      signUpFormType: 'Hacker'
+      signUpFormType: 'Hacker',
+      isUserLoggedIn: false
     }
 
-
+    this.logInUser = this.logInUser.bind(this)
     this.signinUser = this.signinUser.bind(this)
   }
+
+  logInUser(data)
+  {
+    this.setState({email: data.email});
+  }  
 
   signinUser(data)
   {
     let userData = data.ops[0]
-    if ( userData )
+    if ( userData ) {
       this.setState({ email: userData.email, firstName: userData.firstName, lastName: userData.lastName, school: userData.school, employmentSeeking: userData.employmentSeeking, jobPosition: userData.jobPosition,
-        resume: userData.resume, geolocation: { longitude: userData.geolocation.longitude, latitude: userData.geolocation.latitude } })
+        resume: userData.resume, geolocation: { longitude: userData.geolocation.longitude, latitude: userData.geolocation.latitude } });
+    }
   }
 
 
   render() {
+    if(this.state.email){
+      return (
+            <BrowserRouter>
+
+        <div>
+      <section className="menu cid-qHhwGVCsKV" once="menu" id="menu1-e">
+          <nav className="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm" style={{height: `100px`, backgroundColor: `#2D3142`}}>         
+            <div className="menu-logo" style={{margin: 0}}>
+              <div className="navbar-brand">
+                <span className="navbar-caption-wrap">
+                  <NavLink to="/" className="navbar-caption text-secondary display-2">
+                    <img src="assets/images/logo2-white.png" height="50" left="50%"/>
+                  </NavLink>
+                </span>
+              </div>
+            </div>
+            <input type="text" className="form-control px-3" name="searchbar" data-form-field="Search Bar" placeholder="Search" style={{width: `600px`, float: `left`}}/>
+            
+              <div style={{marginLeft: `30px`, width: `800px`}}>
+                <NavLink to="/profile"><img src="assets/images/profile.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
+                <NavLink to="#"><img src="assets/images/message.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
+                <NavLink to="/notifications"><img src="assets/images/notifs.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
+                <NavLink to="/hackathons"><img src="assets/images/laptop.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
+                
+                <NavLink to="/"><img src="assets/images/standby.png" style={{marginRight: `30px`, height: `28px`, float: `right`}}/></NavLink>
+              </div>
+          </nav>
+        </section>    
+                
+                <div className="content">
+                   <Route exact path="/" component={NewsFeed}/>
+                   <Route path="/profile" component={Profile}/>
+                   <Route path="/notifications" component={GeoLocation}/>
+                   <Route path="/hackathons" component={Hackathon}/>
+                </div>
+        </div>
+            </BrowserRouter>
+
+        );
+    }
     return (
       <div>
-        <NavBar firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} />
+        <NavBar firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} logInUser={this.logInUser}/>
         <FrontSplash/>
       </div>
       // <section className="menu cid-qHhwGVCsKV" once="menu" id="menu1-e">

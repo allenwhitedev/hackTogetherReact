@@ -8,7 +8,8 @@ class NavBar extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      isUserLoggedIn: false
     }
   }
 
@@ -17,12 +18,36 @@ class NavBar extends Component {
     if(!this.state.email || !this.state.password) 
     {
       return alert('You need both fields to log in');
+    } else {
+      this.props.logInUser({email: this.state.email});
     }
+
   }
 
   render() {
-    if(this.props.firstName || this.props.lastName || this.props.email) {
-      return (<div> Signed In </div>);
+    if(this.props.email) {
+      return (
+        <section className="menu cid-qHhwGVCsKV" once="menu" id="menu1-e">
+          <nav className="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm" style={{height: `100px`, backgroundColor: `#2D3142`}}>         
+            <div className="menu-logo" style={{margin: 0}}>
+              <div className="navbar-brand">
+                <span className="navbar-caption-wrap">
+                  <a className="navbar-caption text-secondary display-2" href="hacker-home.html">
+                    <img src="assets/images/logo2-white.png" height="50" left="50%"/>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <input type="text" className="form-control px-3" name="searchbar" data-form-field="Search Bar" placeholder="Search" style={{width: `600px`, float: `left`}}/>
+            
+              <div style={{marginLeft: `30px`, width: `800px`}}>
+                <a href="/profile"><img src="assets/images/profile.png" style={{marginLeft: `30px`, height: `28px`}}/></a>
+                <a href="message.html"><img src="assets/images/message.png" style={{marginLeft: `30px`, height: `28px`}}/></a>
+                <a href="notifs.html"><img src="assets/images/notifs.png" style={{marginLeft: `30px`, height: `28px`}}/></a>
+                <a href="index.html"><img src="assets/images/standby.png" style={{marginLeft: `30px`, height: `28px`, float: `right`}}/></a>
+              </div>
+          </nav>
+        </section>);
     }
     return (
         <section className="menu cid-qHhwGVCsKV" once="menu" id="menu1-e">
@@ -41,7 +66,7 @@ class NavBar extends Component {
               </div>
             </div>
             <div className="mbr-section-btn" style={{float:`center`,marginRight: 0,justifyContent: `flexStart`, alignItems: `flexStart`}}>
-              <NavLink to="/home" className="btn btn-primary display-4" 
+              <NavLink to="/" className="btn btn-primary display-4" 
                   style={{marginLeft: `16px`, textAlign: `center`, backgroundColor: `#2D3142`, color: `#FFFFFF`, borderColor: `#2D3142`, height: `50px`, float: `right`}}
                   onClick={() => this.submitLogin()}>
                   LOGIN
