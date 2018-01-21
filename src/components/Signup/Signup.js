@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './signup.css'
+import 'react-router-dom';
+import { Redirect } from 'react-router';
 
 class Signup extends Component 
 {
@@ -34,10 +36,11 @@ class Signup extends Component
 		else
 		{
 			let stringifiedBody = JSON.stringify({ type: 'hacker', email: this.state.email, firstName: this.state.firstName, lastName: this.state.lastName, school: this.state.school, 
-				employmentSeeking: this.state.employmentSeeking, resume: this.state.resume, geolocation: { latitude: this.state.latitude, longitude: this.state.longitude } })
+				employmentSeeking: this.state.employmentSeeking, jobPosition: this.state.jobPosition, resume: this.state.resume, geolocation: { latitude: this.state.latitude, longitude: this.state.longitude } })
 			fetch(this.props.apiUrl + '/signup', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: stringifiedBody })
 				.then( response => response.json() ).then( (data) =>
 				{
+					this.props.signinUser(data)
 					console.log('data:', data)
 				})			
 		}
@@ -45,9 +48,14 @@ class Signup extends Component
 
 	render()
 	{
-		return(
-			<form className='Signup' onSubmit={ (e) => { e.preventDefault(); this.submitSignup('hacker') } } >
-				<h2>This is the SignUp component</h2>
+		let signupFormBody = null
+		
+		if ( this.props.email )
+			return <Redirect to='/' />
+
+		if ( !this.props.email )
+			signupFormBody = <form className='Signup' onSubmit={ (e) => { e.preventDefault(); this.submitSignup('hacker') } } >
+				<h3>This is the Signup component</h3>
 
 				<label htmlFor='email'>Email </label>
 				<input name='email' type='text' value={this.state.email} onChange={ (e) => this.setState({email: e.target.value})} />
@@ -87,6 +95,12 @@ class Signup extends Component
 				<button type='submit'>Submit</button>
 
 			</form>
+
+
+		return(
+			<div className='Signup'>
+				{signupFormBody}
+			</div>
 		)
 	}
 }
