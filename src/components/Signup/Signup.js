@@ -37,7 +37,7 @@ class Signup extends Component
 		console.log('submitSignup log here')
 		if ( this.props.userType === 'hacker' && (!this.state.email || !this.state.firstName || !this.state.lastName || !this.state.school || !this.state.employmentSeeking || !this.state.jobPosition || !this.state.resume) )
 			return alert('All fields are required to signup, hacker')
-		else if ( this.props.userType === 'employer' && !this.state.email || !this.state.employerName || !this.state.jobPositionRoleOne || !this.state.jobPositionRoleTwo || !this.state.jobPositionRoleThree || !this.state.jobPositionQuantityOne || !this.state.jobPositionQuantityTwo || !this.state.jobPositionQuantityThree )
+		else if ( this.props.userType === 'employer' && (!this.state.email || !this.state.employerName || !this.state.jobPositionRoleOne || !this.state.jobPositionRoleTwo || !this.state.jobPositionRoleThree || !this.state.jobPositionQuantityOne || !this.state.jobPositionQuantityTwo || !this.state.jobPositionQuantityThree) )
 		{
 			console.log("can't submit employer yet, a field is missing is, here are the fields", this.state.email, this.state.employerName, this.state.jobPositionRoleOne, this.state.jobPositionRoleTwo, this.state.jobPositionRoleThree, this.state.jobPositionQuantityOne, this.state.jobPositionQuantityTwo, this.state.jobPositionQuantityThree )
 			return alert('All fields are required to signup, employer')
