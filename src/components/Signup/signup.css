@@ -1,0 +1,2 @@
+.Signup { background-color: #e0e0e0; display: flex; flex-direction: column; padding: 5px; width: 50%; }
+.Signup > * { margin: 5px; }

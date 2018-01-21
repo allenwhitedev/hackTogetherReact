@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, NavLink, BrowserRouter } from 'react-router-dom';
 
 import logo from './logo.svg'
+
 import './App.css'
 // import MyMapComponent from './components/MapComponent/MapComponent.js'
 import TestComponent from './components/TestComponent/TestComponent'
@@ -10,11 +11,7 @@ import NewsFeed from './components/NewsFeedComponent/NewsFeedComponent';
 import NearbyHackathons from './components/NearbyHackthonsComponent/NearbyHackathonsComponent';
 import NavBar from './components/NavBarComponent/NavBarComponent';
 import FrontSplash from './components/FrontSplashComponent/FrontSplashComponent';
-
-// var style2 ={
-//   float: 'right',
-//   width: 450px, 
-// }
+import Signup from './components/Signup/Signup.js'
 
 class App extends Component 
 {
@@ -25,11 +22,22 @@ class App extends Component
 
     this.apiUrl = 'http://localhost:8000'
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      signUpFormType: ''
+      firstName: null,
+      lastName: null,
+      email: null,
+      signUpFormType: 'Hacker'
     }
+
+
+    this.signinUser = this.signinUser.bind(this)
+  }
+
+  signinUser(data)
+  {
+    let userData = data.ops[0]
+    if ( userData )
+      this.setState({ email: userData.email, firstName: userData.firstName, lastName: userData.lastName, school: userData.school, employmentSeeking: userData.employmentSeeking, jobPosition: userData.jobPosition,
+        resume: userData.resume, geolocation: { longitude: userData.geolocation.longitude, latitude: userData.geolocation.latitude } })
   }
 
 
@@ -78,6 +86,23 @@ class App extends Component
       //   </div>
       // </div>  
       // </BrowserRouter>
+//       <BrowserRouter>
+//       <div>
+//         <h1>Simple SPA</h1>
+//         <ul className="header">
+//           <li><NavLink to="/">Home</NavLink></li>
+//           <li><NavLink to="/profile">Stuff</NavLink></li>
+//           <li><NavLink to="/notifications">Contact</NavLink></li>
+//           <li><NavLink to='/signup'>Signup</NavLink></li>
+//         </ul>
+//         <div className="content">
+//            <Route path="/" component={NewsFeed}/>
+//            <Route path="/profile" render={ () => <TestComponent apiUrl={this.apiUrl} /> } />
+//            <Route path="/notifications" component={GeoLocation}/>
+//            <Route path='/signup' render={ () => <Signup apiUrl={this.apiUrl} email={this.state.email} signinUser={this.signinUser} /> } />
+//         </div>
+//       </div>  
+//       </BrowserRouter>
     );
   }
 }
