@@ -1,0 +1,16 @@
+.GeoLocation {
+	width: 800px;
+	height: 500px;
+}
+
+.CardList {
+	width: 300px;
+	height: 5000px;
+}
+
+.HackathonCard {
+	margin-bottom: 10px;
+	display: inline-block;
+	height: 80px;
+	border: 1px black solid;
+}

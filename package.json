@@ -10,6 +10,7 @@
     "@types/markerclustererplus": "^2.1.33",
     "@types/react": "^16.0.34",
     "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
     "react-geolocated": "^2.2.1",
     "react-google-maps": "^9.4.5",
