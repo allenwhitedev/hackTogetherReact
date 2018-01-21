@@ -23,7 +23,7 @@ class TestComponent extends Component
 			.then( response => response.json() ).then( (data) =>
 		{
 			this.setState({ myPostTestValueFromAPI: data.message })
-		})
+		}).catch( (err) => console.log(err) )
 	}
 
 	render()
