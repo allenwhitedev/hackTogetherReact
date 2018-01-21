@@ -1,2 +1,5 @@
-.Signup { background-color: #e0e0e0; display: flex; flex-direction: column; padding: 5px; width: 50%; }
-.Signup > * { margin: 5px; }
+.Signup { background-color: #fff; width: 45%; }
+.extraSignupInputs { background-color: transparent; text-align: center; }
+.extraSignupInputs > select { margin: 5px; }
+.schoolSignupInput { margin: auto; }
+#signupFormHacker { margin-top: 70px; }

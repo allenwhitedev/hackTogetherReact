@@ -45,7 +45,7 @@ class App extends Component
     return (
       <div>
         <NavBar firstName={this.state.firstName} lastName={this.state.lastName} email={this.state.email} />
-        <FrontSplash/>
+        <FrontSplash apiUrl={this.apiUrl} email={this.state.email} signinUser={this.signinUser} />
       </div>
       // <section className="menu cid-qHhwGVCsKV" once="menu" id="menu1-e">
       //   <BrowserRouter>
