@@ -13,6 +13,7 @@ import FrontSplash from './components/FrontSplashComponent/FrontSplashComponent'
 import Signup from './components/Signup/Signup.js'
 import Profile from './components/ProfileComponent/ProfileComponent';
 import Hackathon from './components/HackathonComponent/HackathonComponent';
+import EmployerProfile from './components/EmployerProfileComponent/EmployerProfileComponent';
 
 class App extends Component 
 {
@@ -70,6 +71,7 @@ class App extends Component
             
               <div style={{marginLeft: `30px`, width: `800px`}}>
                 <NavLink to="/profile"><img src="assets/images/profile.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
+                <NavLink to="/employerProfile"><img src="assets/images/profile.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
                 <NavLink to="#"><img src="assets/images/message.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
                 <NavLink to="/notifications"><img src="assets/images/notifs.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
                 <NavLink to="/hackathons"><img src="assets/images/laptop.png" style={{marginLeft: `30px`, height: `28px`}}/></NavLink>
@@ -81,6 +83,7 @@ class App extends Component
                 
                 <div className="content">
                    <Route exact path="/" component={NewsFeed}/>
+                   <Route path="/employerProfile" component={EmployerProfile}/>
                    <Route path="/profile" component={Profile}/>
                    <Route path="/notifications" component={GeoLocation}/>
                    <Route path="/hackathons" component={Hackathon}/>

@@ -50,9 +50,9 @@ class NearbyHackathons extends Component {
         <div style={{display:`inline-block`}} className="CardList">
           {hackathons.map((item, index) => 
               <div className="HackathonCard">
-                name: {item.name}
-                timespan: {item.timespan}
-                location: {item.location}
+                {item.name} <br/>
+                {item.timespan} <br/>
+                {item.location}
               </div>
           )}
         </div>
