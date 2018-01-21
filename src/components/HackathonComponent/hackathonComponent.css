@@ -1,0 +1,7 @@
+.hackathonTabs { list-style: none; font-size: 40px; border: 2px solid #232323; display: flex; justify-content: space-around; }
+.hackathonTabs > li { color: #424242; }
+.hackathonTabs > li:hover { cursor: pointer; }
+.activeHackathonTab { border-bottom: 3px solid #232323; color: #232323 !important; }
+.hackathonDescription { padding: 25px; font-size: 28px; width: 80%; margin: auto; color: #424242; }
+.hackathonSchedule { list-style: none; margin: auto; padding-left: 240px; font-size: 24px; color: #424242 !important;}
+.hackathonSponsors > img { max-width: 250px; margin: 40px; }
