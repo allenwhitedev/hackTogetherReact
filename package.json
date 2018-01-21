@@ -11,6 +11,7 @@
     "@types/react": "^16.0.34",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.0",
+    "react-d3-basic": "^1.6.11",
     "react-dom": "^16.2.0",
     "react-geolocated": "^2.2.1",
     "react-google-maps": "^9.4.5",

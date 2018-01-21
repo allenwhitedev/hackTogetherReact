@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Route, NavLink, BrowserRouter } from 'react-router-dom';
 
+// import NearbyHackathons from '../NearbyHackathonsComponent/NearbyHackathonsComponent';
 import Background from '../../profile-cover.png';
+import NearbyHackathons from '../NearbyHackthonsComponent/NearbyHackathonsComponent';
 
 class Profile extends Component
 {
@@ -18,7 +20,7 @@ class Profile extends Component
 			  <div className="mbr-section-btn" style={{float:`right`, margin:`auto`, marginLeft: `30px`, alignItems: `flex-start`}}><a className="btn btn-primary display-4" href="hacker.html" style={{textAlign: `center`, backgroundColor: `#2D3142`, color: `#FFFFFF`,  borderColor: `#2D3142`, height: `50px`}}>Edit Profile</a>
 			  </div>
 
-			    <p style={{paddingLeft: `50px`, margin: 0, fontSize: 6}}><font className="mbr-bold mbr-white">University of Georgia</font></p>
+			    <p style={{paddingLeft: `50px`, margin: 0, fontSize: 20}}><font className="mbr-bold mbr-white">Georgia State University</font></p>
 
 			  </div>
 
@@ -26,7 +28,7 @@ class Profile extends Component
 
 			<div style={{height: `500px`, width: `90%`, margin: `auto`, marginTop: `30px`}}>
 			    
-			    Hello World
+			    // <NearbyHackathons />
 
 			</div>
 			</div>
