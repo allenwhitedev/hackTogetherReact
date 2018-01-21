@@ -35,7 +35,7 @@ class FrontSplash extends Component {
 	                <h3 className="mbr-section-subtitle align-right mbr-light mbr-white mbr-fonts-style display-5"></h3>
 	            </div>
 
-	            <Signup apiUrl={this.props.apiUrl} email={this.props.email} signinUser={this.props.signinUser} />
+	            <Signup apiUrl={this.props.apiUrl} email={this.props.email} signinUser={this.props.signinUser} userType={this.state.userType} />
 
 	        </div>
 	    </div>

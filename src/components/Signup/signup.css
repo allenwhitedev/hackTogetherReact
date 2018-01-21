@@ -3,3 +3,5 @@
 .extraSignupInputs > select { margin: 5px; }
 .schoolSignupInput { margin: auto; }
 #signupFormHacker { margin-top: 70px; }
+.signupInputsLabel { color: #fff; font-weight: 300; }
+.jobPositionNumberField { width: 40px; height: 25px; border-radius: 5px; }
