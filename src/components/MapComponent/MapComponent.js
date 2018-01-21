@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+// import ReactDOM from 'react-dom';
 import { compose, withProps } from 'recompose';
 import { 
 	withScriptjs,
@@ -7,7 +8,7 @@ import {
 	Marker
 } from 'react-google-maps';
 
-import './mapComponent.css';
+import './MapComponent.css';
 
 const Map = compose(
   withProps({
