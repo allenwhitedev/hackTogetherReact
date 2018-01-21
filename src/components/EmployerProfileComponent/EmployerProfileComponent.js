@@ -36,9 +36,11 @@ class EmployerProfile extends Component
 
 			</section>
 
-			<div style={{height: `700px`, width: `90%`, margin: `auto`, marginTop: `30px`}}>
-			    
-				<img src="assets/images/pichart.png" style={{border: `1px black solid`, margin: `auto`, padding: `auto`}}/>
+			<div style={{height: `700px`, marginLeft: `50px`, marginTop: `200px`, display: `inline-block`}}>
+			    <h1> SwampHacks: Language Preferences </h1>
+				<img src="assets/images/pichart.png" style={{border: `1px black solid`, margin: `auto`, height: `475px`}}/>
+				<img src="assets/images/attendee-graduation-graph.png" style={{border: `1px black solid`, margin: `auto`, height: `475px`, marginLeft: `300px`}}/>
+
 			</div>
 			</div>
 );
