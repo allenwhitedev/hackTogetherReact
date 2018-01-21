@@ -31,6 +31,9 @@ class Hackathon extends Component
   
 </section>
 
+
+	
+
 <div style={{height: `100%`, width: `85%`, margin: `auto`}}>
   
 <dl className="accordion" style={{margin: 0}}>
@@ -116,12 +119,12 @@ class Hackathon extends Component
     </div>
 
     <div style={{height: `350px`, width: `350px`, backgroundColor: `#F7F7F7`, padding: `10px`, border: `5px solid #12130F`, marginTop: `30px`, float: `center`}}>
-      <h1><b>What is a hackathon?</b></h1>
-      <p style={{textAlign: `justify`}}>A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends a hackathon to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. You don’t have to be a programmer and you certainly don’t have to be majoring in Computer Science.</p>
+      <h1><b>What should I bring?</b></h1>
+      <p style={{textAlign: `justify`}}>Just yourself, your laptop, some toiletries, and a passion for learning!</p>
     </div>
     <div style={{height: `350px`, width: `350px`, backgroundColor: `#F7F7F7`, padding: `10px`, border: `5px solid #12130F`, marginTop: `30px`, float: `center`}}>
-      <h1><b>What is a hackathon?</b></h1>
-      <p style={{textAlign: `justify`}}>A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends a hackathon to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. You don’t have to be a programmer and you certainly don’t have to be majoring in Computer Science.</p>
+      <h1><b>Okay. But how much does it cost though?</b></h1>
+      <p style={{textAlign: `justify`}}>Not even a dime. Hackathons are completely free so come and enjoy the free fun, food, and festivities for a weekend and make something cool!</p>
     </div>
 
     </div>
@@ -129,12 +132,12 @@ class Hackathon extends Component
     <div style={{display: `flex`,  marginTop: `30px`, justifyContent: `space-between`}}>
       
     <div style={{height: `350px`, width: `350px`, backgroundColor: `#F7F7F7`, padding: `10px`, border: `5px solid #12130F`, marginTop: `30px`, float: `left`}}>
-      <h1><b>What is a hackathon?</b></h1>
-      <p style={{textAlign: `justify`}}>A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends a hackathon to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. You don’t have to be a programmer and you certainly don’t have to be majoring in Computer Science.</p>
+      <h1><b>Where is it?</b></h1>
+      <p style={{textAlign: `justify`}}>It will be located at University of Florida in the Marston Library</p>
     </div>
    <div style={{height: `350px`, width: `350px`, backgroundColor: `#F7F7F7`, padding: `10px`, border: `5px solid #12130F`, marginTop: `30px`, float: `center`}}>
-      <h1><b>What is a hackathon?</b></h1>
-      <p style={{textAlign: `justify`}}>A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends a hackathon to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. You don’t have to be a programmer and you certainly don’t have to be majoring in Computer Science.</p>
+      <h1><b>Are there travel reimbursements?</b></h1>
+      <p style={{textAlign: `justify`}}>Nope lmao sorry</p>
     </div>
 <div style={{height: `350px`, width: `350px`, backgroundColor: `#F7F7F7`, padding: `10px`, border: `5px solid #12130F`, marginTop: `30px`, float: `center`}}>
       <h1><b>What is a hackathon?</b></h1>
